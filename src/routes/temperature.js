@@ -6,9 +6,7 @@ const expressValidator = require('express-validator')
 let dummyCount = 0
 let temperatures = [];
 
-const validate = [
-    expressValidator.check('temperature').isLength({min: 1}).withMessage('Field temperature can not be null')
-]
+
 
 router.get('/', (req, res) => {
     res.status(200).send(temperatures)
