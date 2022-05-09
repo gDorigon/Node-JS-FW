@@ -1,66 +1,21 @@
-## Express Server  
-
-> install dependencies:
-```
-npm install express
-npm install cors
-```
-
-> Create a start script on package.json file:
-```
-  "scripts": {
-    "start": "node src/app.js"
-  },
-```
-
-### 01 Running a minimal express server  
-> run the server
-```
-npm install
-and
-npm start
-or
-node src/server.js
-```
-
+### Exercícios
 ---
-### 02 First endpoint (Text/plain Hello World)
-```
-curl -X GET http://localhost:4001/
-```
+PARTE 1 (Responder esses exercicios (1 ao 9) em um README no repositório da aplicação node / express de vocês.)
+1. Pesquisar sobre o que é JWT (Json Web Token) e Cookies para transporte de dados, descrever.
+2. Atualizar o sistema de autenticação básico da ultima aula para utilizar JWT. (Procurar tutoriais como por exemplo: https://www.luiztools.com.br/post/autenticacao-json-web-token-jwt-em-nodejs/) e implementar a sua solução.
+3. Finalizado a implementação do JWT, enviar para mim o link do repositório (que vocês vem trabalhando no exercicio das 14 branches) no privado no discord com o novo sistema de autenticação.
 
-### 03 POST data to the server
-```
-curl -X POST http://localhost:4001/ -H 'Content-Type: application/json' -d "{\"temperature\": 42}"
-```
+PARTE 2 (Na próxima aula começaremos estudar programação orientada a objetos e posteriormente Java)
+4. Pesquisar sobre POO (Programação Orientada a Objetos). O que é POO ?
+6. Quais as diferenças entre programação estruturada e programação orientada a objetos ?
+7. Quais linguagens estruturadas e quais linguagens orientadas a objetos ?
+8. O que são classes e o que são objetos ?
+9. Quais o quatro pilares da POO ? Descreva cada um deles com suas palavras. 
 
-### 04 GET data saved on server & DELETE endpoint
-```
-curl -X DELETE http://localhost:4001/
-```
+### Observações Sobre os Projetos
+OBS: Os repositórios de projetos desenvolvidos para PADO, DEVEM ser criados como privado na organização PADOLabs (NÃO CRIAR EM REPOSITÓRIO PESSOAL, VISTO QUE É SOFTWARE PROPRIETÁRIO).
 
-### 05 Changing object values with PUT and query & path parameters
-```
-curl -X PUT http://localhost:4001/<temperature>?id=<id>
-```
 
-### 06 Path paramenters Vs Query parameters
-```
-curl -X GET http://localhost:4001/<id>
-curl -X DELETE http://localhost:4001/query?id=<id>
-```
+### Respostas 
 
-### 07 Separation of Concerns (SOC) Temperature routes
-```
-curl -X POST http://localhost:4001/temperature -H 'Content-Type: application/json' -d "{\"temperature\": <value>}"
-curl -X GET http://localhost:4001/temperature
-curl -X GET http://localhost:4001/temperature/<id>
-curl -X PUT http://localhost:4001/temperature/<temperature>?id=<id>
-curl -X DELETE http://localhost:4001/temperature
-curl -X DELETE http://localhost:4001/temperature/query?id=<id>
-```
-
-### 08 Server Side Render
-```
-chrome: http://localhost:4001/
-```
+1. É um token que é utilizado para autenticação para validação de dados, sendo muito utilizados em requisições em sites, ele funciona salvando informações em arquivos JSON. Cookies são dados salvos no navegador que contém algumas informações do usuário, assim garantindo uma segurança na validação do mesmo. 
