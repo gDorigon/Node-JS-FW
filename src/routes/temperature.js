@@ -54,14 +54,14 @@ router.delete('/', (req, res) => {
     });
 })
 
-outer.delete('/query', (req, res) => {
-    
+router.delete('/query', (req, res) => {
+
     Temperature.findByIdAndRemove(req.query.id)
-    .then(result => {
-        res.status(200).send(result)
-    }).catch( error => {
-        res.status(404).send()
-    })
+        .then(result => {
+            res.status(200).send(result)
+        }).catch(error => {
+            res.status(404).send()
+        })
 })
 
 router.put('/:value', (req, res) => {

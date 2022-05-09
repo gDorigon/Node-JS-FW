@@ -16,7 +16,32 @@ PARTE 2 (Na próxima aula começaremos estudar programação orientada a objetos
 OBS: Os repositórios de projetos desenvolvidos para PADO, DEVEM ser criados como privado na organização PADOLabs (NÃO CRIAR EM REPOSITÓRIO PESSOAL, VISTO QUE É SOFTWARE PROPRIETÁRIO).
 
 
-### Respostas 
+### Respostas PT 1
 
 1. É um token que é utilizado para autenticação para validação de dados, sendo muito utilizados em requisições em sites, ele funciona salvando informações em arquivos JSON. Cookies são dados salvos no navegador que contém algumas informações do usuário, assim garantindo uma segurança na validação do mesmo. 
+
+
+### Respostas PT 2
+
+4. É um pilar da programação onde a linguagem precisa de "caracteristicas" de um objeto do mundo real, em sua criação utilizando polimorfismo e encapsulamento. Obejtos criados em uma linguagem com POO pode possuir classes, atributos e métodos, por exemplo um cachorro, que possui raça sendo um atributo e o ato de latir podendo ser um método.
+
+6. A diferença entre as duas é que em uma linguagem POO ela é voltada a descrever objeto e tornalo o mais próximo de um real, já uma linguagem estruturada é voltada a funções e procedimentos escritos pelo usuário.
+
+7. POO = Java, C# e Pascal.
+Estruturada = C e PHP
+
+8. Classe seria a "teoria" do objeto como se fosse uma descrição, já o objeto seria o "físico".
+
+9. Abstração = extreair do objeto o máximo de caracteristicas possiveis.
+Polimorfismo = é a junção de classes derivadas que juntas formam superclasses para chamar um método.
+Herança = é criar uma classe apartir de uma classe já existente.
+Encapsulamento = encapsular uma classe/objeto para que ele não sofra acessos indevidos.
+
+
+
+
+
+
+
+
 
