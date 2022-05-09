@@ -2,12 +2,16 @@ const express = require('express')
 const router = express.Router()
 const Temperature = require('../models/Temperature')
 
+const auth = require('../middlewares/auth')
+const expressValidator = require('express-validator')
+
 const validate = [
-    expressValidator.check('temperature').isLength({min: 1}).withMessage('Field temperature can not be null'),
+    expressValidator.check('temperature').isLength({ min: 1 }).withMessage('Field temperature can not be null'),
     expressValidator.check('temperature').isNumeric().withMessage('Field temperature should be a number')
 ]
 
-router.get('/', (req, res) => {
+router.get('/', auth, (req, res) => {
+
     Temperature.find().then(temperatures => {
         res.status(200).send(temperatures);
     }).catch(error => {
@@ -18,19 +22,19 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
 
     Temperature.findById(req.params.id)
-    .then(temperature => {
-        res.status(200).send(temperature)
-    }).catch(error => {
-        res.status(404);
-    })
+        .then(temperature => {
+            res.status(200).send(temperature)
+        }).catch(error => {
+            res.status(404);
+        })
 
 })
 
 router.post('/', [validate], (req, res) => {
 
     const erros = expressValidator.validationResult(req);
-    if(!erros.isEmpty()){
-        return res.status(422).send({erros: erros.array()})
+    if (!erros.isEmpty()) {
+        return res.status(422).send({ erros: erros.array() })
     }
 
     const temperature = new Temperature({
@@ -38,19 +42,19 @@ router.post('/', [validate], (req, res) => {
     })
 
     temperature.save()
-    .then(result => {
-        res.status(201).send(result)
-    })
+        .then(result => {
+            res.status(201).send(result)
+        })
 })
 
 router.delete('/', (req, res) => {
-    
+
     Temperature.deleteMany().then(result => {
         res.status(200).send()
     });
 })
 
-router.delete('/query', (req, res) => {
+outer.delete('/query', (req, res) => {
     
     Temperature.findByIdAndRemove(req.query.id)
     .then(result => {
@@ -68,7 +72,7 @@ router.put('/:value', (req, res) => {
         temperature.save().then(result => {
             res.status(200).send(result)
         })
-    }).catch( error => {
+    }).catch(error => {
         res.status(404).send()
     })
 

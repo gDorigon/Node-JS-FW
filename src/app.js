@@ -20,7 +20,7 @@ server.get('/', (req, res) => {
 server.use((req, res) => res.status(404).sendFile(path.join(__dirname, "views", "404.html")));
 
 const main = async () => {
-    await mongoose.connect(process.env.MY_CONN);
+    await mongoose.connect('mongodb+srv://Dorigon:Dorigas123Rei@dorigon.ifq6z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
   }
   
   main()

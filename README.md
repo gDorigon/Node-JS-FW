@@ -19,3 +19,4 @@ OBS: Os repositórios de projetos desenvolvidos para PADO, DEVEM ser criados com
 ### Respostas 
 
 1. É um token que é utilizado para autenticação para validação de dados, sendo muito utilizados em requisições em sites, ele funciona salvando informações em arquivos JSON. Cookies são dados salvos no navegador que contém algumas informações do usuário, assim garantindo uma segurança na validação do mesmo. 
+
